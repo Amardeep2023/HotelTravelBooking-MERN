@@ -1,27 +1,29 @@
-Overview
+## Overview
 The Hotel Travel Booking App is a full-stack application built using the MERN stack (MongoDB, Express.js, React, Node.js). Inspired by Airbnb, this platform allows users to browse, book, and manage accommodations for travel. The app features user authentication, booking management, and an interactive interface for seamless browsing and booking experience.
 
-Features
-User Authentication: Sign up, login, and user authentication using JWT tokens.
-Browse Listings: View available properties with descriptions, images, and pricing.
-Booking System: Users can make bookings, view their upcoming stays, and cancel reservations.
-User Profile: Manage user details, bookings, and view their booking history.
-Responsive Design: Fully responsive interface for mobile and desktop devices.
+## Features
 
-Tech Stack
+- **User Authentication**: Sign up, login, and user authentication using JWT tokens.
+- **Browse Listings**: View available properties with descriptions, images, and pricing.
+- **Booking System**: Users can make bookings, view their upcoming stays, and cancel reservations.
+- **User Profile**: Manage user details, bookings, and view their booking history.
+- **Responsive Design**: Fully responsive interface for mobile and desktop devices.
 
-Frontend:
-React.js for building dynamic user interfaces.
-Vite for fast build tool and development server.
-Tailwind CSS for responsive and customizable styling.
 
-Backend:
-Node.js and Express.js for handling backend logic and API endpoints.
-MongoDB for database management and storing user, booking, and property data.
-JWT (JSON Web Tokens) for secure user authentication and authorization.
-Others:
-Bcrypt.js for password encryption.
-Multer for handling file uploads (images for property listings).
+##Tech Stack
+
+**Frontend:**
+- React.js for building dynamic user interfaces.
+- Vite for fast build tool and development server.
+- Tailwind CSS for responsive and customizable styling.
+
+**Backend:**
+- Node.js and Express.js for handling backend logic and API endpoints.
+- MongoDB for database management and storing user, booking, and property data.
+- JWT (JSON Web Tokens) for secure user authentication and authorization.
+- Others:
+- Bcrypt.js for password encryption.
+- Multer for handling file uploads (images for property listings).
 
 ![Screenshot (96)](https://github.com/user-attachments/assets/d8db91e0-ee68-4918-abd4-5d9b7d7cb8f0)
 ![Screenshot (95)](https://github.com/user-attachments/assets/efd8dfaf-304f-4024-b543-9c73cfd8203a)
