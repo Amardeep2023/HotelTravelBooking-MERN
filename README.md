@@ -10,7 +10,7 @@ The Hotel Travel Booking App is a full-stack application built using the MERN st
 - **Responsive Design**: Fully responsive interface for mobile and desktop devices.
 
 
-##Tech Stack
+## Tech Stack
 
 **Frontend:**
 - React.js for building dynamic user interfaces.
