@@ -36,6 +36,16 @@ The Hotel Travel Booking App is a full-stack application built using the MERN st
 ![Screenshot (103)](https://github.com/user-attachments/assets/971033f9-615a-4b61-a3f8-8f72099e1dbf)
 ![Screenshot (104)](https://github.com/user-attachments/assets/6e8766f9-f06c-402a-bc57-779bd06447cc)
 
+## Responsive-
+![Screenshot (106)](https://github.com/user-attachments/assets/7e985cdf-a497-47a6-a151-3fe0d5296fcd)
+![Screenshot (107)](https://github.com/user-attachments/assets/55b1fa9d-7810-4580-a29e-daf025892eb8)
+![Screenshot (108)](https://github.com/user-attachments/assets/5b761797-aa0d-45e6-9cf1-c7574c0f1efb)
+![Screenshot (111)](https://github.com/user-attachments/assets/21e16245-e33b-491f-afa4-b1c956135223)
+![Screenshot (110)](https://github.com/user-attachments/assets/c33a8e56-845f-46d4-a325-b17c7bb03655)
+
+
+
+
 
 
 
