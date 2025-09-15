@@ -27,7 +27,7 @@ export default function Head() {
         </div>
         </Link>
 
-        <div className="flex gap-3 items-center smdev:hidden  ml-44  border-gray-400 border rounded-3xl p-2 shadow shadow-slate-600 hover:shadow-slate-800">
+        <div className="flex gap-3 justify-between items-center smdev:hidden    border-gray-400 border rounded-3xl p-2 shadow shadow-slate-600 hover:shadow-slate-800">
           <span className="font-bold text-md">Anywhere |</span>
           <span className="font-bold text-md">Any Week |</span>
           <span className="text-slate-500 items-center justify-center">
