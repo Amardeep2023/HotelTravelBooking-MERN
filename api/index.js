@@ -13,7 +13,7 @@ const fs=require('fs');
 const multer =require('multer');
 const { genSalt } = require('bcrypt');
 const app =express();
-const port=4000;
+const port = process.env.PORT || 4000
 
 const bcryptSalt=bcrypt.genSaltSync(10);
 const jwtsecret='amardeep';
@@ -22,9 +22,25 @@ app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads',express.static(__dirname+'/uploads'));
 
+const allowedOrigins = [
+  'https://hotel-travel-booking.vercel.app/',
+                                       // Production frontend
+  'http://localhost:5173'              // Local development (Vite/React)
+];
 app.use(cors({
-    credentials:true,
-    origin:'http://localhost:5173',
+  origin: function (origin, callback) {
+    // Allow requests with no origin (mobile apps, curl, etc.)
+    if (!origin) return callback(null, true);
+    
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true, // Enable cookies/auth headers
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 mongoose.connect(process.env.MONGO_URL);
