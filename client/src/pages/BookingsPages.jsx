@@ -12,7 +12,7 @@ export default function BookingsPages() {
   // Fetch data when component mounts or when 'id' changes
   useEffect(() => {
     if (id) {
-      axios.get('/bookings')  // Send a GET request to the API to get all bookings
+      axios.get('https://hoteltravelbooking-mern.onrender.com/api/bookings')  // Send a GET request to the API to get all bookings
         .then(response => {
           // Find the booking based on the ID
           const foundBooking = response.data.find(({ _id }) => _id === id);

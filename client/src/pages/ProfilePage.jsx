@@ -15,7 +15,7 @@ export default function ProfilePage() {
     subpage = "profile";
   }
   async function logout() {
-    await axios.post("/logout");
+    await axios.post("https://hoteltravelbooking-mern.onrender.com/api/logout");
 
     setRedirect("/");
     setUser(null);

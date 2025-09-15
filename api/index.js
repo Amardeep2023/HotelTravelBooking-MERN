@@ -59,7 +59,7 @@ function getUserDataToken(req){
 
 
 
-app.post('/register',async (req,res)=>{
+app.post('/api/register',async (req,res)=>{
     
     
     const {name,email,password}= req.body;
@@ -77,7 +77,7 @@ app.post('/register',async (req,res)=>{
    
 })
 
-app.post('/login', async(req,res)=>{
+app.post('/api/login', async(req,res)=>{
    
    const {email,password} =req.body;
     const userDoc= await User.findOne({email});
@@ -103,7 +103,7 @@ app.post('/login', async(req,res)=>{
 
 })
 
-app.get('/profile', (req,res) => {
+app.get('/api/profile', (req,res) => {
    
     const {token} = req.cookies;
     if (token) {
@@ -117,13 +117,13 @@ app.get('/profile', (req,res) => {
     }
   });
 
-  app.post('/logout',(req,res)=>{
+  app.post('/api/logout',(req,res)=>{
     res.cookie('token','').json(true);
   });
 
   
   
-  app.post('/upload-by-link', async (req,res)=>{
+  app.post('/api/upload-by-link', async (req,res)=>{
     const {link}=req.body;
     const NewName='photo'+Date.now()+'.jpg';
     await imageDownloader.image({
@@ -147,7 +147,7 @@ app.get('/profile', (req,res) => {
     res.json(uploadFiles)
   })
 
-  app.post('/places',(req,res)=>{
+  app.post('/api/places',(req,res)=>{
     const {token} = req.cookies;
     const {
         title,address,addedphotos,description,perks,extraInfo,
@@ -163,20 +163,20 @@ app.get('/profile', (req,res) => {
     })
   })
 
-app.get('/user-places',(req,res)=>{
+app.get('/api/user-places',(req,res)=>{
     const {token} = req.cookies;
     jwt.verify(token, jwtsecret, {}, async (err, userData)=>{
         const {id}=userData;
         res.json(await place.find({owner:id}));
     })
 })
-app.get('/places/:id',async (req,res)=>{
+app.get('/api/places/:id',async (req,res)=>{
   const {id}=req.params;
   res.json(await place.findById(id))
 
 })
 
-app.put('/places',async (req,res)=>{
+app.put('/api/places',async (req,res)=>{
   const {token} = req.cookies;
   const {id, title,address,addedphotos,description,perks,extraInfo,
     checkIn,checkOut,maxGuest,price}=req.body;
@@ -197,11 +197,11 @@ app.put('/places',async (req,res)=>{
 
 })
 
-app.get('/places',async (req,res)=>{
+app.get('/api/places',async (req,res)=>{
   res.json(await place.find());
 })
 
-app.post('/bookings', async (req,res)=>{
+app.post('/api/bookings', async (req,res)=>{
   const userData= await getUserDataToken(req);
   const {name,phone,checkIn,checkOut,place,maxGuest,price,}=req.body;
   bookings.create({
@@ -216,7 +216,7 @@ app.post('/bookings', async (req,res)=>{
 
 
 
-app.get('/bookings',async (req,res)=>{
+app.get('/api/bookings',async (req,res)=>{
   const userData= await getUserDataToken(req);
   res.json(await bookings.find({user:userData.id}).populate('place'))
 })

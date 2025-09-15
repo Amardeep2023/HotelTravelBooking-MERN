@@ -12,7 +12,7 @@ export default function LoginPage(){
     e.preventDefault();
     console.log("Form submitted!");
     
-    await axios.post("/register",{
+    await axios.post("https://hoteltravelbooking-mern.onrender.com/api/register",{
       name,
       email,
       password,

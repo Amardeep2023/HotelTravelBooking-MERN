@@ -10,7 +10,7 @@ export default function PhotosUp ({addedphotos,onChange}) {
 
   async function uploadByLinks (ev){
     ev.preventDefault()
-    const {data:filename}=await axios.post('/upload-by-link',{link:photoLink});
+    const {data:filename}=await axios.post('https://hoteltravelbooking-mern.onrender.com/upload-by-link',{link:photoLink});
     onChange(prev=>{
      return [...prev,filename]
     });
@@ -22,7 +22,7 @@ export default function PhotosUp ({addedphotos,onChange}) {
   for(let i=0;i<files.length;i++){
     data.append('photos',files[i]);
   }
-  axios.post('/upload',data,{
+  axios.post('https://hoteltravelbooking-mern.onrender.com/api/upload',data,{
     headers:{'Content-Type':'multipart/form-data'}
   }).then(response=>{
     const {data:filenames}=response;

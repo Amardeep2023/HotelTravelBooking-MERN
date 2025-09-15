@@ -53,7 +53,7 @@ export default function PlaceGallery({ place }) {
         <div>
           {place.addedphotos?.[0] && (
             <img 
-              src={`http://localhost:4000/uploads/${place.addedphotos[0]}`}
+              src={`https://hoteltravelbooking-mern.onrender.com/api/uploads/${place.addedphotos[0]}`}
               alt=""
             />
           )}

@@ -15,7 +15,11 @@ import PlaceDesc from "./pages/PlaceDescPage";
 import BookingsPages from "./pages/BookingsPages";
 import BookingMul from "./pages/BookingMulPages";
 
-axios.defaults.baseURL = "http://localhost:4000";
+axios.defaults.baseURL =
+  window.location.hostname === "localhost"
+    ? "http://localhost:4000"
+    : "https://hoteltravelbooking-mern.onrender.com";
+
 axios.defaults.withCredentials = true;
 function App() {
   return (

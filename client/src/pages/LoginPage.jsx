@@ -16,7 +16,7 @@ export default function LoginPage(){
     async function handleLogin(e) {
     e.preventDefault();
     try {
-     const {data}= await axios.post('/login',{email,password});
+     const {data}= await axios.post('https://hoteltravelbooking-mern.onrender.com/api/login',{email,password});
      setUser(data);
       alert('Login Successful!')
       setredirect(true);

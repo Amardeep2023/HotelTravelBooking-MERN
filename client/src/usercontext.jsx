@@ -10,7 +10,7 @@ export function UserContextProvider({children}) {
  
   useEffect(() => {
     if (!user) {
-      axios.get('/profile').then(({data}) => {
+      axios.get('https://hoteltravelbooking-mern.onrender.com/api/profile').then(({data}) => {
         setUser(data);
         setReady(true);
         

@@ -8,7 +8,7 @@ export default function PlacesPages() {
   const { action } = useParams(); 
   const[places,setPlaces]=useState([]);
   useEffect(()=>{
-    axios.get('/user-places').then(({data})=>{
+    axios.get('https://hoteltravelbooking-mern.onrender.com/api/user-places').then(({data})=>{
       setPlaces(data)
     })
 

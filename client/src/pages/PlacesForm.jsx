@@ -25,7 +25,7 @@ export default function PlacesForm(){
     if(!id){
       return ;
     }
-    axios.get('/places/'+id).then(response=>{
+    axios.get('https://hoteltravelbooking-mern.onrender.com/api/places/'+id).then(response=>{
       const {data}=response;
       setTitle(data.title);
       setAddress(data.address);

@@ -30,7 +30,7 @@ export default function BookingWidget({place}){
 
 
    async function BookMyPlace(){
-        const response=await axios.post('/bookings',{name,
+        const response=await axios.post('https://hoteltravelbooking-mern.onrender.com/api/bookings',{name,
             checkIn,checkOut,maxGuest,phone,
             place:place._id,
             price:NoOfNights*place.price,

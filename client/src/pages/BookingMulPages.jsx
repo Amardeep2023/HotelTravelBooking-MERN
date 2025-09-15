@@ -35,7 +35,7 @@ export default function BookingMul(){
                         {place.addedphotos[0]?.length > 0 && (
                             <img
                                 className="w-44 rounded-md smdev:w-44 smdev:h-40"
-                                src={`http://localhost:4000/uploads/${place.addedphotos[0]}`}
+                                src={`https://hoteltravelbooking-mern.onrender.com/api/uploads/${place.addedphotos[0]}`}
                                 alt="Main Photo"
                             />
                         )}

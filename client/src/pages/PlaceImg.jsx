@@ -10,7 +10,7 @@ export default function PlaceImg({ place, index = 0 }) {
         <div>
             <img
                 className="h-full border rounded-xl object-cover"
-                src={`http://localhost:4000/uploads/${place.addedphotos[index]}`}
+                src={`https://hoteltravelbooking-mern.onrender.com/api/uploads/${place.addedphotos[index]}`}
                 alt="Place"
             />
         </div>

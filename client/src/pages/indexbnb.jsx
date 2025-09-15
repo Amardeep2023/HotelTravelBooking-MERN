@@ -7,7 +7,7 @@ export default function Indexbnb(){
     const[places,setPLaces]=useState([]);
 
     useEffect(()=>{
-        axios.get('/places').then(response=>{
+        axios.get('https://hoteltravelbooking-mern.onrender.com/api/places').then(response=>{
             setPLaces(response.data);
         })
     },[])
